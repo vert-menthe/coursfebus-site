@@ -362,7 +362,7 @@ margin: 0rem !important;
         </div>
         <div class="spacer-small"></div>
         <div class="contact6_form-block w-form">
-          <form id="wf-form-Contact-popup" name="wf-form-Contact-g-n-ral" data-name="Contact général" method="get" class="contact6_form" data-wf-page-id="67fe57b5c5a95247ae25b3e2" data-wf-element-id="9a379add-4156-8554-46ec-91d2bbc5a376">
+          <form id="wf-form-Contact-popup" name="wf-form-Contact-g-n-ral" data-name="Contact général" method="post" action="../php/submit-form.php" class="contact6_form ajax-form" data-form-source="modal">
             <div class="form_field-2col">
               <div class="form_field-wrapper"><label for="Prenom-modal-2" class="form_field-label">Prénom</label><input class="form_input w-input" maxlength="256" name="Pr-nom" data-name="Prénom" placeholder="" type="text" id="Prenom-modal" required=""></div>
               <div class="form_field-wrapper"><label for="Nom-modal-2" class="form_field-label">Nom</label><input class="form_input w-input" maxlength="256" name="Nom" data-name="Nom" placeholder="" type="text" id="Nom-modal" required=""></div>
@@ -987,7 +987,7 @@ margin: 0rem !important;
                     </div>
                   </div>
                   <div class="contact6_form-block w-form">
-                    <form id="wf-form-Contact" name="wf-form-Contact-g-n-ral" data-name="Contact général" method="get" class="contact6_form" data-wf-page-id="67fe57b5c5a95247ae25b3e2" data-wf-element-id="e5b38e44-a4d8-f716-abe7-32f62032e27f">
+                    <form id="wf-form-Contact" name="wf-form-Contact-g-n-ral" data-name="Contact général" method="post" action="../php/submit-form.php" class="contact6_form ajax-form" data-form-source="footer">
                       <div class="form_field-2col">
                         <div class="form_field-wrapper"><label for="Pr-nom" class="form_field-label">Prénom</label><input class="form_input w-input" maxlength="256" name="Pr-nom" data-name="Prénom" placeholder="" type="text" id="Prenom-plain" required=""></div>
                         <div class="form_field-wrapper"><label for="Nom-plain" class="form_field-label">Nom</label><input class="form_input w-input" maxlength="256" name="Nom" data-name="Nom" placeholder="" type="text" id="Nom-plain" required=""></div>
@@ -1116,5 +1116,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 </script>
+<script src="../js/form-handler.js" defer></script>
 </body>
 </html>

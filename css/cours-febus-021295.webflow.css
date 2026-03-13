@@ -4801,8 +4801,9 @@ figcaption {
   height: auto;
   max-height: 90vh;
   padding: 4rem;
+  padding-bottom: 80px;
   position: relative;
-  overflow: scroll;
+  overflow: visible;
 }
 
 .text-color-3-2 {
