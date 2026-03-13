@@ -4,8 +4,6 @@ header('Content-Type: application/json');
 $errors = [];
 $response = ['success' => false, 'errors' => []];
 
-session_start();
-
 function sanitize($data) {
     return htmlspecialchars(trim($data), ENT_QUOTES, 'UTF-8');
 }
@@ -16,13 +14,6 @@ function validateEmail($email) {
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     $response['errors']['general'] = 'Méthode non autorisée';
-    echo json_encode($response);
-    exit;
-}
-
-$csrfToken = $_POST['csrf_token'] ?? '';
-if (empty($csrfToken) || !hash_equals($_SESSION['csrf_token'] ?? '', $csrfToken)) {
-    $response['errors']['general'] = 'Token de sécurité invalide';
     echo json_encode($response);
     exit;
 }
