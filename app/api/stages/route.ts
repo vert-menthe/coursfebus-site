@@ -29,7 +29,7 @@ export async function PUT(request: NextRequest) {
   try {
     // Simple admin check via header (in production, use proper auth)
     const adminSecret = request.headers.get('x-admin-secret');
-    const expectedSecret = process.env.ADMIN_SECRET;
+    const expectedSecret = process.env.NEXT_PUBLIC_ADMIN_SECRET;
     
     if (!adminSecret || adminSecret !== expectedSecret) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
@@ -67,7 +67,7 @@ export async function PUT(request: NextRequest) {
 export async function POST(request: NextRequest) {
   try {
     const adminSecret = request.headers.get('x-admin-secret');
-    const expectedSecret = process.env.ADMIN_SECRET;
+    const expectedSecret = process.env.NEXT_PUBLIC_ADMIN_SECRET;
     
     if (!adminSecret || adminSecret !== expectedSecret) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
