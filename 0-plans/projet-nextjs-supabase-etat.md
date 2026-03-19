@@ -97,7 +97,7 @@ npm run dev
 
 - **URL** : https://depfowglgvsbtcdcktal.supabase.co
 - **Console** : https://supabase.com/dashboard/project/depfowglgvsbtcdcktal
-- **Token CLI** : `sbp_1f7df28a1dc493ca00e00cadd32943274bccd69a`
+- **Token CLI** : `sbp_...` (à récupérer dans Supabase Dashboard > Account > Tokens)
 
 ### Variables d'environnement
 
@@ -107,6 +107,8 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 SUPABASE_SERVICE_ROLE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 NEXT_PUBLIC_ADMIN_SECRET=cours-febus-admin-secret-2025-secure
 ```
+
+**Note** : Ces secrets sont dans `.env.local` (non commité). Voir `.env.example` pour les variables à configurer.
 
 ---
 
